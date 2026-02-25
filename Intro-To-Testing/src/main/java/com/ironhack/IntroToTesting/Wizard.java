@@ -1,6 +1,8 @@
 package com.ironhack.IntroToTesting;
 
 public class Wizard extends Player{
+    private SpellLibrary spellLibrary;
+
     private int spell;
 
     public Wizard(int health, int strength, int lives, int spell) {
@@ -18,5 +20,9 @@ public class Wizard extends Player{
 
     public void setSpell(int spell) {
         this.spell = spell;
+    }
+
+    public String castRandomSpell(){
+        return "Casting " + spellLibrary.getRandomSpell();
     }
 }
